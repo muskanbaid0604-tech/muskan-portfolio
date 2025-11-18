@@ -1,26 +1,275 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@font-face {
+  src: url("/fonts/PPEditorialNewVariable.woff2") format("woff2");
+  font-family: PPEditorialNew;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/fonts/PPEditorialNewLight.woff2") format("woff2");
+  font-family: PPEditorialNew;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/fonts/PPEditorialOldVariable.woff2") format("woff2");
+  font-family: PPEditorialOld;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/fonts/PPEditorialOldLight.woff2") format("woff2");
+  font-family: PPEditorialOld;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/fonts/PPFramaVariable.woff2") format("woff2");
+  font-family: PPFrama;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/fonts/PPFramaTextVariable.woff2") format("woff2");
+  font-family: PPFramaText;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/fonts/PPHattonVariableVF.woff2") format("woff2");
+  font-family: PPHatton;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/fonts/PPPangaiaRegular.woff2") format("woff2");
+  font-family: PPPangaia;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/fonts/PPPangaiaVariable.woff2") format("woff2");
+  font-family: PPPangaia;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: oklch(0.9639 0.0076 61.4527);
+  --foreground: oklch(0.5903 0.1425 38.8456);
+  --card: oklch(0.9702 0 0);
+  --card-foreground: oklch(0.5903 0.1425 38.8456);
+  --popover: oklch(0.9702 0 0);
+  --popover-foreground: oklch(0.5903 0.1425 38.8456);
+  --primary: oklch(0.5903 0.1425 38.8456);
+  --primary-foreground: oklch(0.9639 0.0076 61.4527);
+  --secondary: oklch(0.9639 0.0076 61.4527);
+  --secondary-foreground: oklch(0.5903 0.1425 38.8456);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.6219 0.0581 60.9138);
+  --accent: oklch(0.9174 0.0119 59.5561);
+  --accent-foreground: oklch(0.5903 0.1425 38.8456);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.7554 0.0596 18.5607);
+  --input: oklch(0.8435 0.0272 17.7029);
+  --ring: oklch(0.7442 0.05 18.3372);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --radius: 0.825rem;
+  --shadow-x: 0;
+  --shadow-y: 1px;
+  --shadow-blur: 0px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0;
+  --shadow-color: oklch(0 0 0);
+  --shadow-2xs: 0 1px 0px 0px hsl(0 0% 0% / 0);
+  --shadow-xs: 0 1px 0px 0px hsl(0 0% 0% / 0);
+  --shadow-sm: 0 1px 0px 0px hsl(0 0% 0% / 0), 0 1px 2px -1px hsl(0 0% 0% / 0);
+  --shadow: 0 1px 0px 0px hsl(0 0% 0% / 0), 0 1px 2px -1px hsl(0 0% 0% / 0);
+  --shadow-md: 0 1px 0px 0px hsl(0 0% 0% / 0), 0 2px 4px -1px hsl(0 0% 0% / 0);
+  --shadow-lg: 0 1px 0px 0px hsl(0 0% 0% / 0), 0 4px 6px -1px hsl(0 0% 0% / 0);
+  --shadow-xl: 0 1px 0px 0px hsl(0 0% 0% / 0), 0 8px 10px -1px hsl(0 0% 0% / 0);
+  --shadow-2xl: 0 1px 0px 0px hsl(0 0% 0% / 0);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.269 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.371 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.275 0 0);
+  --input: oklch(0.325 0 0);
+  --ring: oklch(0.556 0 0);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --radius: 0.825rem;
+  --shadow-x: 0;
+  --shadow-y: 1px;
+  --shadow-blur: 0px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0;
+  --shadow-color: oklch(0 0 0);
+  --shadow-2xs: 0 1px 0px 0px hsl(0 0% 0% / 0);
+  --shadow-xs: 0 1px 0px 0px hsl(0 0% 0% / 0);
+  --shadow-sm: 0 1px 0px 0px hsl(0 0% 0% / 0), 0 1px 2px -1px hsl(0 0% 0% / 0);
+  --shadow: 0 1px 0px 0px hsl(0 0% 0% / 0), 0 1px 2px -1px hsl(0 0% 0% / 0);
+  --shadow-md: 0 1px 0px 0px hsl(0 0% 0% / 0), 0 2px 4px -1px hsl(0 0% 0% / 0);
+  --shadow-lg: 0 1px 0px 0px hsl(0 0% 0% / 0), 0 4px 6px -1px hsl(0 0% 0% / 0);
+  --shadow-xl: 0 1px 0px 0px hsl(0 0% 0% / 0), 0 8px 10px -1px hsl(0 0% 0% / 0);
+  --shadow-2xl: 0 1px 0px 0px hsl(0 0% 0% / 0);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+  --font-permanent-marker: var(--font-permanent-marker);
+  --font-comforter-brush: var(--font-comforter-brush);
+  --font-comforter: var(--font-comforter);
+  --font-water-brush: var(--font-water-brush);
+  --font-knewave: var(--font-knewave);
+  --font-babylonica: var(--font-babylonica);
+  --font-protest-revolution: var(--font-protest-revolution);
+
+  --font-frama: PPFrama;
+  --font-pangaia: PPPangaia;
+  --font-hatton: PPHatton;
+  --font-editorial-old: PPEditorialOld;
+  --font-editorial-new: PPEditorialNew;
+  --font-frama-text: PPFramaText;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-stroke: 1px transparent;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-frama;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-editorial-old !tracking-normal;
+}
+
+::selection {
+  @apply bg-primary text-primary-foreground;
+}
+
+@layer utilities {
+  .main-heading {
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight;
+  }
+  .padding-x {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  .padding-y {
+    @apply py-8 lg:py-16 sm:py-12;
+  }
+  .margin {
+    @apply my-16 lg:my-24 md:my-20 sm:my-16;
+  }
+  .heading {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight;
+  }
+  .sub-heading {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight;
+  }
+  .paragraph {
+    @apply text-lg sm:text-xl font-medium tracking-tight;
+  }
+  .sub-paragraph {
+    @apply text-base sm:text-lg font-medium tracking-tight;
+  }
+  .small-text {
+    @apply text-xs sm:text-sm font-light tracking-tight;
+  }
 }

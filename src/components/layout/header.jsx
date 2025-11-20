@@ -68,7 +68,7 @@ export default function Header() {
         </div>
       </motion.nav>
       <div className="fixed  inset-x-4 top-4 z-[90] md:hidden">
-        <nav className="bg-backdrop rounded-xl border w-full  backdrop-blur-md px-2 py-3">
+        <nav className="bg-backdrop rounded-xl border border-black/10 w-full  backdrop-blur px-2 py-3">
           <div className="flex items-center justify-between">
             {/* Logo Section */}
             <Link
@@ -121,7 +121,7 @@ export default function Header() {
                 transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
                 className="overflow-hidden"
               >
-                <div className="mt-4 pb-4 border-t pt-4">
+                <div className="mt-4 pb-4 border-t border-black/50 pt-4">
                   <div className="flex flex-col gap-2 px-2">
                     {navbarItems.map((link) => (
                       <Link

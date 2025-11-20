@@ -63,7 +63,7 @@ export default function Header() {
             </Link>
           ))}
           <Button className="ml-auto" size={"sm"}>
-            Contact
+            Let's Talk
           </Button>
         </div>
       </motion.nav>
@@ -136,7 +136,7 @@ export default function Header() {
                   </div>
                   <Link href="/contact" className="p-2  inline-block">
                     <Button size="sm" className="px-4">
-                      Contact Us
+                      Let's Talk
                     </Button>
                   </Link>
                 </div>

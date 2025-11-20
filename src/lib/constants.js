@@ -3,26 +3,21 @@ export const navbarItems = [
   {
     id: 1,
     title: "Home",
-    href: "/home",
+    href: "/#home",
   },
   {
     id: 2,
-    title: "About",
-    href: "/about",
+    title: "About Muskan",
+    href: "/#about",
   },
   {
     id: 3,
-    title: "Portfolio",
-    href: "/portfolio",
+    title: "Work",
+    href: "/#portfolio",
   },
   {
     id: 4,
-    title: "Services",
-    href: "/services",
+    title: "Offerings",
+    href: "/#services",
   },
-  // {
-  //   id: 5,
-  //   title: "Contact us",
-  //   href: "/contact",
-  // },
 ];

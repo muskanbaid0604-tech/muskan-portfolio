@@ -244,6 +244,11 @@ h6 {
   @apply bg-primary text-primary-foreground;
 }
 
+html,
+body {
+  scroll-behavior: smooth !important;
+}
+
 @layer utilities {
   .main-heading {
     @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight;

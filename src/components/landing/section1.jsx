@@ -18,9 +18,9 @@ export default function Section1() {
         <div className="flex max-lg:flex-col w-full justify-between">
           <h2 className="heading pb-4 !font-medium z-10">
             F<i className="-ms-1">or</i> {"  "}
-            Bad*ss <br />C<i className="-ms-1 me-0.5">re</i>ative {"  "}
-            Bran
-            <i className="-ms-0.5">ds</i>
+            Brands <br />T<i className="-ms-1 me-0.5">hat</i> {"  "}
+            Don&apos;t <i className="-ms-0.5">Follow</i>.
+            <br /> They L<i className="-ms-1 me-0.5">ead</i>.
           </h2>
           <div className="max-h-[28rem] border-2 border-black/60 aspect-[3/4] sm:m-8 xl:me-24">
             <Image
@@ -32,13 +32,15 @@ export default function Section1() {
               className="object-cover  object-right size-full grayscale-100"
             />
             <div className="w-full flex sm:justify-end">
-              <Button className="sm:mt-6 mt-16 sm:ms-auto">Know More</Button>
+              <Button className="sm:mt-6 mt-16 sm:ms-auto">
+                View My Process
+              </Button>
             </div>
           </div>
         </div>
-        <p className="self-end justify-end text-sm mt-4">
-          Emilia Clarke is an actress known for her <br /> roles in film and
-          television
+        <p className="self-end justify-end text-sm mt-4 max-w-sm">
+          Elevating style and defining identity through deliberate, high-impact
+          digital work.
         </p>
       </div>
     </section>

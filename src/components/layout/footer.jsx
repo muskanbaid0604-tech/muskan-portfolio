@@ -13,12 +13,13 @@ export default function Footer() {
       <h2 className={cn("heading pb-4 !font-light text-secondary/90 z-10")}>
         Cr<i className="-ms-1">eat</i>ing {"  "}
         <span className="font-protest-revolution italic main-heading font-base text-primary pe-1">
-          cult{" "}
+          A-List{" "}
         </span>{" "}
-        B<i className="-ms-1 me-0.5">ran</i>ds {"  "}
+        Dig<i className="-ms-1 me-0.5">it</i>al {"  "}
+        Pre<i className="-ms-1 me-0.5">sen</i>ce.
       </h2>
       <h3 className="text-secondary heading !font-light z-10">
-        Domestically Studio La Terre
+        Muskan Baid. A Creative Force.
       </h3>
     </footer>
   );

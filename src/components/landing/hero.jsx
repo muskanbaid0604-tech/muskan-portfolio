@@ -9,9 +9,19 @@ export default function Hero() {
         fill
         className="w-full h-auto lg:h-screen max-h-[1024px] lg:w-auto object-cover"
       />
-      <h1 className="absolute top-1/2 left-1/2 transform z-10 -translate-x-1/2 -translate-y-1/2 text-8xl sm:text-9xl md:text-[10rem] lg:text-[12rem] select-none xl:text-[14rem] font-bold !font-water-brush text-white">
-        emilia
-      </h1>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="flex flex-col items-center gap-4">
+          <h1 className="text-8xl sm:text-9xl !font-water-brush md:text-[10rem] lg:text-[12rem] xl:text-[14rem] font-bold text-white">
+            muskan
+          </h1>
+          <p className="text-white/90 text-sm sm:text-base">
+            Curating Digital Excellence | Since '21
+          </p>
+          <button className="bg-primary text-secondary px-4 py-2 text-sm rounded">
+            View My Best Work
+          </button>
+        </div>
+      </div>
     </section>
   );
 }

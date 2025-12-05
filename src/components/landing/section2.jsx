@@ -29,11 +29,14 @@ const services = [
 
 export default function Section2() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 max-sm:divide-y border-t border-black/60 lg:divide-x divide-black/60">
+    <section
+      id="services"
+      className="grid grid-cols-1 md:grid-cols-2 max-sm:divide-y border-t border-black/60 lg:divide-x divide-black/60"
+    >
       <div className="p-6 sm:p-8 lg:p-16 xl:p-24 flex flex-col justify-center items-center text-justify gap-4">
         <h2 className="heading pb-4 lg:leading-14 !font-medium z-10">
           The <i className="-ms-1.5">Muskan</i> <br />
-          Baid <i className="-ms-0.5">Method</i>: <br />
+          Baid <i className="-ms-0.5 me-1">Method</i>: <br />
           Beyond <i className="-ms-1 me-0.5">the</i> Brief
         </h2>
         <p className="max-w-xs">

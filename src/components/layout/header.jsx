@@ -14,19 +14,19 @@ import { navVariants } from "../animation/motion";
 import { Button } from "../ui/button";
 
 export default function Header() {
-  const [hidden, setHidden] = useState(false);
+  // const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     // Add null check for initial value; compare previous/next scroll positions
-    const previous = scrollY.getPrevious();
-    if (previous !== undefined && latest > previous) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
+    // const previous = scrollY.getPrevious();
+    // if (previous !== undefined && latest > previous) {
+    //   setHidden(true);
+    // } else {
+    //   setHidden(false);
+    // }
     // Also handle blurred background if scrolled beyond threshold
     setIsScrolled(latest > 5);
   });
@@ -43,7 +43,7 @@ export default function Header() {
           "w-full h-12 padding-x fixed top-0 left-0 z-50 hidden md:flex items-center justify-between ",
           isScrolled && "backdrop-blur-[8px] shadow"
         )}
-        animate={hidden ? "hidden" : "visible"}
+        // animate={hidden ? "hidden" : "visible"}
       >
         <div className="w-[50%]">
           <Link href={"/"} className=" w-fit">

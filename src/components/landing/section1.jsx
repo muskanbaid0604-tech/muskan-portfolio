@@ -3,7 +3,10 @@ import { Button } from "../ui/button";
 
 export default function Section1() {
   return (
-    <section className="min-h-[480px] bg-secondary grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 max-sm:divide-y border-t border-black/60 lg:divide-x divide-black/60">
+    <section
+      id="about"
+      className="min-h-[480px] bg-secondary grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 max-sm:divide-y border-t border-black/60 lg:divide-x divide-black/60"
+    >
       <div className="bg-primary aspect-auto p-6 sm:p-8 lg:p-16 xl:p-24 col-span-1 lg:col-span-2">
         <Image
           src="/images/emilia.webp"

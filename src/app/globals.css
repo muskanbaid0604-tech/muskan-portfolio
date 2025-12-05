@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@plugin "@toolwind/corner-shape";
+
 @font-face {
   src: url("/fonts/PPEditorialNewVariable.woff2") format("woff2");
   font-family: PPEditorialNew;
@@ -101,7 +103,7 @@
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
-  --radius: 0.825rem;
+  --radius: 2rem;
   --shadow-x: 0;
   --shadow-y: 1px;
   --shadow-blur: 0px;
@@ -146,7 +148,7 @@
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
-  --radius: 0.825rem;
+  --radius: 2rem;
   --shadow-x: 0;
   --shadow-y: 1px;
   --shadow-blur: 0px;
@@ -224,10 +226,37 @@ body {
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 corner-squircle;
+    box-sizing: border-box;
   }
+
   body {
     @apply bg-background text-foreground font-frama;
+  }
+
+  @supports not (corner-shape: squircle) {
+    :root {
+      --radius: 0.625rem;
+    }
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    font-variant-numeric: tabular-nums;
+    /* Prevent unwanted scrollbars; set smoother text */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  :focus-visible {
+    outline-color: var(--ring);
+    outline-width: 3px;
+    outline-style: solid;
+    outline-offset: 2px;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
   }
 }
 

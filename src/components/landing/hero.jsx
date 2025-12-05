@@ -1,4 +1,5 @@
 import Image from "next/image";
+import HeroButtons from "../ui/animated-button";
 
 export default function Hero() {
   return (
@@ -15,11 +16,10 @@ export default function Hero() {
             muskan
           </h1>
           <p className="text-white/90 text-sm sm:text-base">
-            Curating Digital Excellence | Since '21
+            Curating Digital Excellence | Since '25
           </p>
-          <button className="bg-primary text-secondary px-4 py-2 text-sm rounded">
-            View My Best Work
-          </button>
+          {/* <Button>View My Best Work</Button> */}
+          <HeroButtons>View My Best Work</HeroButtons>
         </div>
       </div>
     </section>

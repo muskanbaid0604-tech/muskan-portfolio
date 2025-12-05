@@ -1,13 +1,16 @@
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
 import { Button } from "../ui/button";
+import TitleScroll from "./titleScroll/page";
 
 export default function Section3() {
   return (
-    <section className="w-full  border-t border-black/60 relative lg:min-h-screen overflow-x-hidden max-h-[1920px] lg:max-h-[1024px] bg-secondary">
+    <section
+      id="portfolio"
+      className="w-full  border-t border-black/60 relative lg:min-h-screen overflow-x-hidden max-h-[1920px] lg:max-h-[1024px] bg-secondary"
+    >
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <Marquee speed={75} direction="right" loop={0}>
-          {Array.from({ length: 8 }).map((_, i) => (
+        {/* <Marquee speed={75} direction="right" autoFill>
+          {Array.from({ length: 12 }).map((_, i) => (
             <h2 className="font-editorial-old flex items-center gap-8 text-8xl leading-relaxed sm:text-9xl md:text-[10rem] lg:text-[12rem] xl:text-[16rem]  text-primary">
               WORK {"  "}
               <svg
@@ -22,7 +25,8 @@ export default function Section3() {
               </svg>
             </h2>
           ))}
-        </Marquee>
+        </Marquee> */}
+        <TitleScroll />
       </div>
       <div className="grid relative grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-4 p-4 grid-rows-1 md:grid-rows-2 lg:grid-rows-4">
         <div className="col-span-2 max-w-36 max-h-32 row-span-1 lg:ms-auto lg:place-end lg:row-span-2">
@@ -60,7 +64,10 @@ export default function Section3() {
           undeniable brand presence and impact.
         </p>
         <div className="lg:row-span-2 place-content-center text-sm text-justify col-span-2 sm:max-w-64">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>
+            Pushing boundaries, these projects redefine innovation and elevate
+            brand identities.
+          </p>
           <Button className="mt-4 ms-auto w-full">View All Projects</Button>
         </div>
       </div>

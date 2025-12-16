@@ -5,11 +5,12 @@ export default function Footer() {
   return (
     <footer className="h-[786px] relative border-t border-black/60 flex flex-col justify-evenly items-center">
       <Image
-        src="/images/img1.jpeg"
+        src="/images/footer-banner.webp"
         alt="Hero Image"
         fill
         className="w-full h-[786px] lg:w-auto object-cover grayscale"
       />
+      <div className="absolute inset-0 bg-black/50"></div>
       <h2 className={cn("heading pb-4 !font-light text-secondary/90 z-10")}>
         Cr<i className="-ms-1">eat</i>ing {"  "}
         <span className="font-protest-revolution italic main-heading font-base text-primary pe-1">

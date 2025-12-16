@@ -40,19 +40,19 @@ export default function Header() {
       <motion.nav
         variants={navVariants}
         className={cn(
-          "w-full h-12 padding-x fixed top-0 left-0 z-50 hidden md:flex items-center justify-between ",
+          "w-full h-8 sm:h-12 padding-x fixed top-0 left-0 z-50 hidden md:flex items-center justify-between ",
           isScrolled && "backdrop-blur-[8px] shadow"
         )}
         // animate={hidden ? "hidden" : "visible"}
       >
-        <div className="w-[50%]">
+        <div className="w-[45%]">
           <Link href={"/"} className=" w-fit">
             <h2 className="text-lg bg-primary text-secondary px-3 py-0.5 w-fit">
               Logo
             </h2>
           </Link>
         </div>
-        <div className="flex gap-x-4 items-center w-[50%]">
+        <div className="flex gap-x-4 items-center w-[55%]">
           {navbarItems.map((item) => (
             <Link
               key={item.id}
@@ -68,7 +68,7 @@ export default function Header() {
         </div>
       </motion.nav>
       <div className="fixed  inset-x-4 top-4 z-[90] md:hidden">
-        <nav className="bg-backdrop rounded-xl border border-black/10 w-full  backdrop-blur px-2 py-3">
+        <nav className="bg-backdrop rounded-xl border border-black/10 w-full  backdrop-blur p-2 sm:py-3">
           <div className="flex items-center justify-between">
             {/* Logo Section */}
             <Link

@@ -6,7 +6,7 @@ export default function TitleScroll({ className, ...props }) {
     <div className={cn(styles.container, className)} {...props}>
       <h2
         className={cn(
-          "font-editorial-old flex items-center gap-8 text-8xl leading-relaxed sm:text-9xl md:text-[10rem] lg:text-[12rem] xl:text-[16rem]  text-primary",
+          "font-editorial-old flex items-center pt-8 gap-8 text-8xl leading-relaxed sm:text-9xl md:text-[10rem] lg:text-[12rem] xl:text-[16rem]  text-primary",
           styles.title
         )}
       >

@@ -4,10 +4,7 @@ import TitleScroll from "./titleScroll/page";
 
 export default function Section3() {
   return (
-    <section
-      id="portfolio"
-      className="w-full  border-t border-black/60 relative lg:min-h-screen overflow-x-hidden max-h-[1920px] lg:max-h-[1024px] bg-secondary"
-    >
+    <section className="w-full  border-t border-black/60 relative lg:min-h-screen overflow-x-hidden max-h-[1920px] lg:max-h-[1024px] bg-secondary">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         {/* <Marquee speed={75} direction="right" autoFill>
           {Array.from({ length: 12 }).map((_, i) => (

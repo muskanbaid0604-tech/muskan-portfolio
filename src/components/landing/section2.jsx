@@ -1,40 +1,16 @@
+import { services } from "@/lib/constants";
+import Link from "next/link";
 import { Button } from "../ui/button";
-
-const services = [
-  {
-    title: "Creative Direction",
-    description:
-      "Defining the visual and conceptual roadmap for campaigns and digital presence.",
-    imageUrl: "/images/img1.jpeg",
-  },
-  {
-    title: "Digital Styling & Strategy",
-    description:
-      "Translating aesthetic vision into conversion-focused online strategies.",
-    imageUrl: "/images/img2.jpeg",
-  },
-  {
-    title: "Premium Brand Identity",
-    description:
-      "Developing cohesive, aspirational, and memorable visual language systems.",
-    imageUrl: "/images/img1.jpeg",
-  },
-  {
-    title: "Editorial Design",
-    description:
-      "Creating high-quality lookbooks, e-commerce assets, and impactful layouts.",
-    imageUrl: "/images/img2.jpeg",
-  },
-];
+import TitleScroll from "./titleScroll/page";
 
 export default function Section2() {
   return (
     <section
-      id="services"
-      className="grid grid-cols-1 md:grid-cols-2 max-sm:divide-y border-t border-black/60 lg:divide-x divide-black/60"
+      id="portfolio"
+      className="grid grid-cols-1 relative overflow-hidden md:grid-cols-2 max-sm:divide-y border-t border-black/60 lg:divide-x divide-black/60"
     >
       <div className="p-6 sm:p-8 lg:p-16 xl:p-24 flex flex-col justify-center items-center text-justify gap-4">
-        <h2 className="heading pb-4 lg:leading-14 !font-medium z-10">
+        <h2 className="heading pb-4 lg:leading-14 max-sm:justify-start max-sm:self-start max-sm:ps-8 !font-medium z-10">
           The <i className="-ms-1.5">Muskan</i> <br />
           Baid <i className="-ms-0.5 me-1">Method</i>: <br />
           Beyond <i className="-ms-1 me-0.5">the</i> Brief
@@ -43,11 +19,11 @@ export default function Section2() {
           In a sea of sameness, your brand needs an anchor. I don't just
           execute; I immerse myself in your vision to unearth the raw,
           compelling narrative that connects deeply with your audience. It's not
-          about trends—it's about legacy building.
+          about trends-it's about legacy building.
         </p>
         <Button className="sm:ms-52 mt-8">What I Offer</Button>
       </div>
-      <div className="">
+      <div className="relative md:z-10">
         {services.map((service, i) => (
           <div
             key={service.id ?? `service-${i}`}
@@ -68,9 +44,15 @@ export default function Section2() {
               <p className="text-sm md:text-base mt-3 font-light text-accent max-w-xs">
                 {service.description}
               </p>
+              <Button className="mt-6 w-max" asChild variant={"secondary"}>
+                <Link href={`/portfolio/${service.slug}`}>View More</Link>
+              </Button>
             </div>
           </div>
         ))}
+      </div>
+      <div className="md:absolute col-span-1 md:bottom-0 md:left-1/2 md:-translate-x-1/2 ">
+        <TitleScroll />
       </div>
     </section>
   );

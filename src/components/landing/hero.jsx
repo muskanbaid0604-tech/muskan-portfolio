@@ -3,18 +3,18 @@ import HeroButtons from "../ui/animated-button";
 
 export default function Hero() {
   return (
-    <section className="relative h-full w-full min-h-96 lg:h-screen max-h-[1024px] overflow-hidden">
+    <section className="relative h-full w-full min-h-96 sm:min-h-[30rem] max-sm:-mb-20 max-sm:mt-auto lg:h-[1080px] -my-4 overflow-hidden">
       <Image
-        src="/images/img1.jpeg"
+        src="/images/first-banner.webp"
         alt="Hero Image"
         fill
-        className="w-full h-auto lg:h-screen max-h-[1024px] lg:w-auto object-cover"
+        className="w-full  h-auto object-contain sm:object-cover"
       />
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">
-          <h1 className="text-8xl sm:text-9xl !font-water-brush md:text-[10rem] lg:text-[12rem] xl:text-[14rem] font-bold text-white">
+          {/* <h1 className="text-8xl sm:text-9xl !font-water-brush md:text-[10rem] lg:text-[12rem] xl:text-[14rem] font-bold text-white">
             muskan
-          </h1>
+          </h1> */}
           <p className="text-white/90 text-sm sm:text-base">
             Curating Digital Excellence | Since '25
           </p>

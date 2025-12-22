@@ -40,7 +40,7 @@ export default function Header() {
       <motion.nav
         variants={navVariants}
         className={cn(
-          "w-full h-8 sm:h-12 padding-x fixed top-0 left-0 z-50 hidden md:flex items-center justify-between ",
+          "w-full h-8 sm:h-12 padding-x fixed top-0 bg-secondary/75 left-0 z-50 hidden md:flex items-center justify-between ",
           isScrolled && "backdrop-blur-[8px] shadow"
         )}
         // animate={hidden ? "hidden" : "visible"}
@@ -68,7 +68,7 @@ export default function Header() {
         </div>
       </motion.nav>
       <div className="fixed  inset-x-4 top-4 z-[90] md:hidden">
-        <nav className="bg-backdrop rounded-xl border border-black/10 w-full  backdrop-blur p-2 sm:py-3">
+        <nav className="bg-backdrop bg-secondary rounded-xl border border-black/10 w-full  backdrop-blur p-2 sm:py-3">
           <div className="flex items-center justify-between">
             {/* Logo Section */}
             <Link

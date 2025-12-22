@@ -31,7 +31,7 @@ export default function Section2() {
                  odd:md:flex-row-reverse"
           >
             <img
-              className="w-full border border-black/60 md:w-1/2 h-64 md:h-80 lg:h-96 object-cover grayscale"
+              className="w-full border border-black/60 md:w-1/2 h-64 md:h-80 lg:h-96 object-cover"
               src={service.imageUrl}
               alt={service.title}
               loading="lazy"

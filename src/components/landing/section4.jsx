@@ -19,7 +19,7 @@ export default function Section4() {
             width={360}
             sizes="100"
             alt="Emilia Clarke"
-            className="object-cover  object-right size-full grayscale-100"
+            className="object-cover  object-right size-full  "
           />
         </div>
         <div className="max-h-[28rem] border-2 border-black/60 aspect-square xl:me-16">
@@ -29,7 +29,7 @@ export default function Section4() {
             width={360}
             sizes="100"
             alt="Emilia Clarke"
-            className="object-cover  object-right size-full grayscale-100"
+            className="object-cover  object-right size-full  "
           />
         </div>
         <div className="col-span-1 sm:col-span-2">
@@ -49,7 +49,7 @@ export default function Section4() {
           width={360}
           sizes="100"
           alt="Emilia Clarke"
-          className="object-contain aspect-[9/16] size-full grayscale-100"
+          className="object-contain aspect-[9/16] size-full  "
         />
         <Image
           src="/images/gold-rush.webp"
@@ -57,7 +57,7 @@ export default function Section4() {
           width={360}
           sizes="100"
           alt="Emilia Clarke"
-          className="object-contain aspect-[9/16] size-full grayscale-100"
+          className="object-contain aspect-[9/16] size-full  "
         />
       </div>
     </section>

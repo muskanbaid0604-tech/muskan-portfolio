@@ -125,8 +125,8 @@ export default function Inspiration() {
               spacing like body language,
             </p>
             <p>
-              and won&apos;t hesitate to tell you when your layout is screaming
-              for help! Hi. I&apos;m that designer.
+              and doesn&apos;t hesitate to tell you when your layout is
+              screaming for help! Hi. I&apos;m that designer.
             </p>
           </div>
         </div>

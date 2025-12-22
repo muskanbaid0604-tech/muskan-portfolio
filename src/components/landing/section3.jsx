@@ -37,7 +37,7 @@ export default function Section3() {
           width={360}
           sizes="100"
           alt="Emilia Clarke"
-          className="object-cover col-span-2 md:col-span-1 lg:col-span-4 max-h-40 place-end ms-auto max-md:w-1/2 lg:w-1/3 border border-black/75 lg:me-8 lg:-mb-8 lg:row-span-2 aspect-square object-right size-full grayscale-100"
+          className="object-cover col-span-2 md:col-span-1 lg:col-span-4 max-h-40 place-end ms-auto max-md:w-1/2 lg:w-1/3 border border-black/75 lg:me-8 lg:-mb-8 lg:row-span-2 aspect-square object-right size-full  "
         />
         <Image
           src="/images/img1.jpeg"
@@ -45,7 +45,7 @@ export default function Section3() {
           width={360}
           sizes="100"
           alt="Emilia Clarke"
-          className="object-cover mt-8 col-span-2 lg:col-span-6 md:aspect-[3/4] place-items-center mx-auto border border-black/75 lg:row-span-2 max-w-sm h-full w-auto grayscale-100 max-h-96"
+          className="object-cover mt-8 col-span-2 lg:col-span-6 md:aspect-[3/4] place-items-center mx-auto border border-black/75 lg:row-span-2 max-w-sm h-full w-auto   max-h-96"
         />
         <Image
           src="/images/img1.jpeg"
@@ -53,7 +53,7 @@ export default function Section3() {
           width={360}
           sizes="100"
           alt="Emilia Clarke"
-          className="object-cover mt-8 col-span-2 lg:col-span-6 aspect-[3/4] md:aspect-[4/3] place-items-center mx-auto border border-black/75 lg:row-span-2 max-w-sm h-full md:w-full md:h-auto w-auto grayscale-100 max-h-96"
+          className="object-cover mt-8 col-span-2 lg:col-span-6 aspect-[3/4] md:aspect-[4/3] place-items-center mx-auto border border-black/75 lg:row-span-2 max-w-sm h-full md:w-full md:h-auto w-auto   max-h-96"
         />
         <p className="lg:row-span-2 place-content-center text-sm text-justify col-span-2 sm:max-w-64">
           A curated collection of projects where vision met execution. Each

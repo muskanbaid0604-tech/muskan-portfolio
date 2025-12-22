@@ -11,7 +11,7 @@ export default function Section1() {
           width={360}
           sizes="100"
           alt="Emilia Clarke"
-          className="object-cover border border-black/60 size-full grayscale-100"
+          className="object-cover border border-black/60 size-full"
         />
       </div>
       <div className="col-span-1 py-12 sm:col-span-3 p-6 sm:p-8 lg:p-16 xl:p-24 pb-12">
@@ -29,7 +29,7 @@ export default function Section1() {
               width={360}
               sizes="100"
               alt="Emilia Clarke"
-              className="object-cover  object-right size-full grayscale-100"
+              className="object-cover  object-right size-full  "
             />
             <div className="w-full flex sm:justify-end">
               <Button className="sm:mt-6 mt-16 sm:ms-auto">

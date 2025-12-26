@@ -46,10 +46,12 @@ export default function Header() {
         // animate={hidden ? "hidden" : "visible"}
       >
         <div className="w-[45%]">
-          <Link href={"/"} className=" w-fit">
-            <h2 className="text-lg bg-primary text-secondary px-3 py-0.5 w-fit">
+          <Link href={"/"} className="h-12 w-fit">
+            {/* <h2 className="text-lg bg-primary text-secondary px-3 py-0.5 w-fit">
+
               Logo
-            </h2>
+            </h2> */}
+            <img src="/logo-mb.png" alt="Logo" className="w-auto h-12" />
           </Link>
         </div>
         <div className="flex gap-x-4 items-center w-[55%]">
@@ -62,8 +64,10 @@ export default function Header() {
               {item.title}
             </Link>
           ))}
-          <Button className="ml-auto" size={"sm"}>
-            Let's Talk
+          <Button asChild size="sm" className="px-4 ms-auto">
+            <Link href="#contact" className="">
+              Let's Talk
+            </Link>
           </Button>
         </div>
       </motion.nav>
@@ -75,8 +79,8 @@ export default function Header() {
               href="/"
               className="flex px-2 items-center gap-2 text-sm font-bold"
             >
-              {/* <img src={logoSrc} alt={logoAlt} className="h-12 -mt-1 -mb-2" /> */}
-              <h2 className="text-lg">Logo</h2>
+              <img src="/logo-mb.png" alt="Logo" className="w-full h-12" />
+              {/* <h2 className="text-lg">Logo</h2> */}
             </Link>
 
             {/* Mobile Menu Button and Actions */}
@@ -119,7 +123,7 @@ export default function Header() {
                 animate={{ height: "auto", opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
-                className="overflow-hidden"
+                className="overflow-hidden px-4"
               >
                 <div className="mt-4 pb-4 border-t border-black/50 pt-4">
                   <div className="flex flex-col gap-2 px-2">
@@ -134,7 +138,7 @@ export default function Header() {
                       </Link>
                     ))}
                   </div>
-                  <Link href="/contact" className="p-2  inline-block">
+                  <Link href="#contact" className="p-2  inline-block">
                     <Button size="sm" className="px-4">
                       Let's Talk
                     </Button>

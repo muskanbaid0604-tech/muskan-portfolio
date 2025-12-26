@@ -98,7 +98,7 @@ export default function Inspiration() {
             PROJECT (THE NEEM TRIO)
           </p> */}
         </div>
-        <div className="grid tracking-tight  lg:col-span-2 gap-8">
+        <div className="grid tracking-tight leading-none lg:col-span-2 gap-8">
           <div className="space-y-1  text-justify ">
             <p>
               I love building visual systems that are clean, bold, and

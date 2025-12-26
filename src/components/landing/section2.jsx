@@ -9,6 +9,9 @@ export default function Section2() {
       id="portfolio"
       className="grid grid-cols-1 relative overflow-hidden md:grid-cols-2 max-sm:divide-y border-t border-black/60 lg:divide-x divide-black/60"
     >
+      <div className="md:absolute col-span-1 md:top-0 md:left-1/2 md:-translate-x-1/2 ">
+        <TitleScroll />
+      </div>
       <div className="p-6 sm:p-8 lg:p-16 xl:p-24 flex flex-col justify-center items-center text-justify gap-4">
         <h2 className="heading pb-4 lg:leading-14 max-sm:justify-start max-sm:self-start max-sm:ps-8 !font-medium z-10">
           The <i className="-ms-1.5">Muskan</i> <br />

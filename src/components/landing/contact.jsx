@@ -35,9 +35,9 @@ export default function Contact() {
       newErrors.email = "Please enter a valid email address";
     }
 
-    if (!formData.message.trim()) {
-      newErrors.message = "Message is required";
-    }
+    // if (!formData.message.trim()) {
+    //   newErrors.message = "Message is required";
+    // }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;

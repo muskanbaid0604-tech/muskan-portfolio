@@ -4,7 +4,7 @@ export default function Section4() {
   return (
     <section
       id="services"
-      className="min-h-[520px] lg:min-h-[988px] bg-secondary grid grid-cols-1 sm:grid-cols-5 max-sm:divide-y border-y border-black/60 lg:divide-x divide-black/60"
+      className="min-h-[520px] lg:min-h-[688px] bg-secondary grid grid-cols-1 sm:grid-cols-5 max-sm:divide-y border-y border-black/60 lg:divide-x divide-black/60"
     >
       <div className="col-span-1 py-12 sm:col-span-3 p-6 sm:p-8 lg:p-16 grid grid-cols-1 sm:grid-cols-2 gap-6 pb-12">
         <div className="col-span-1 sm:col-span-2">
@@ -42,7 +42,7 @@ export default function Section4() {
         </div>
       </div>
 
-      <div className="bg-primary p-6 sm:p-8 lg:p-16 col-span-1 sm:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="bg-primary p-6 sm:p-8  col-span-1 sm:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
         <Image
           src="/images/bridal.webp"
           height={420}

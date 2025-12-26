@@ -1,4 +1,5 @@
 import About from "@/components/landing/about";
+import Contact from "@/components/landing/contact";
 import Hero from "@/components/landing/hero";
 import Section1 from "@/components/landing/section1";
 import Section2 from "@/components/landing/section2";
@@ -13,6 +14,7 @@ export default function Home() {
       <Section2 />
       {/* <Section3 /> */}
       <Section4 />
+      <Contact />
     </main>
   );
 }

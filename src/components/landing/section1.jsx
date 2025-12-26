@@ -22,14 +22,14 @@ export default function Section1() {
             Don&apos;t <i className="-ms-0.5">Follow</i>.
             <br /> They L<i className="-ms-1 me-0.5">ead</i>.
           </h2>
-          <div className="max-h-[28rem] border-2 border-black/60 aspect-[3/4] sm:m-8 xl:me-24">
+          <div className="max-h-[28rem] aspect-[3/4] sm:m-8 xl:me-24">
             <Image
               src="/images/logo-sketch.webp"
               height={420}
               width={360}
               sizes="100"
               alt="Emilia Clarke"
-              className="object-cover  object-right size-full  "
+              className="object-cover border-2 border-black/60  object-right size-full  "
             />
             <div className="w-full flex sm:justify-end">
               <Button className="sm:mt-6 mt-16 sm:ms-auto">

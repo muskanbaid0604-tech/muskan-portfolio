@@ -3,13 +3,15 @@ import HeroButtons from "../ui/animated-button";
 
 export default function Hero() {
   return (
-    <section className="relative h-full w-full! min-h-96 sm:min-h-[30rem] max-sm:-mb-20 max-sm:mt-auto lg:min-h-[36rem] aspect-video xl:min-h-[960px] xl:h-auto -my-4 overflow-hidden">
+    <section className="relative w-full max-sm:pt-16 overflow-hidden">
       <Image
         src="/images/first-banner.webp"
         alt="Hero Image"
-        fill
-        sizes="100"
-        className="w-full h-auto object-contain aspect-video sm:object-cover"
+        width={1920}
+        height={1080}
+        sizes="100vw"
+        priority
+        className="w-full h-auto"
       />
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">

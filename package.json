@@ -10,7 +10,11 @@
     "format": "biome format --write"
   },
   "dependencies": {
+    "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-separator": "^1.1.8",
     "@radix-ui/react-slot": "^1.2.3",
+    "@react-email/components": "^1.0.2",
+    "@react-email/render": "^2.0.0",
     "@toolwind/corner-shape": "^0.0.8-3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -21,6 +25,7 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-fast-marquee": "^1.6.5",
+    "resend": "^6.6.0",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {

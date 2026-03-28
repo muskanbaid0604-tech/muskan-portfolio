@@ -66,6 +66,10 @@ const protestRevolution = Protest_Revolution({
 export const metadata = {
   title: "Muskan Baid",
   description: "",
+  icons: {
+    icon: [{ url: "/logo-mb.png", type: "image/png" }],
+    apple: [{ url: "/logo-mb.png", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({ children }) {

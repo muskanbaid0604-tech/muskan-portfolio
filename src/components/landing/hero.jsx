@@ -3,7 +3,7 @@ import HeroButtons from "../ui/animated-button";
 
 export default function Hero() {
   return (
-    <section className="relative w-full max-sm:pt-16 overflow-hidden">
+    <section className="relative w-full max-sm:pt-28 overflow-hidden">
       <Image
         src="/images/first-banner.webp"
         alt="Hero Image"

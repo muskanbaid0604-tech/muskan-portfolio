@@ -40,46 +40,54 @@ export default function Header() {
       <motion.nav
         variants={navVariants}
         className={cn(
-          "w-full h-8 sm:h-12 padding-x fixed top-0 bg-secondary/75 left-0 z-50 hidden md:flex items-center justify-between ",
-          isScrolled && "backdrop-blur-[8px] shadow"
+          "padding-x fixed top-4 left-1/2 z-50 hidden w-fit max-w-[calc(100%-2rem)] -translate-x-1/2 items-center gap-4 rounded-2xl border border-black/10 bg-secondary/85 py-1.5 shadow-md backdrop-blur-md md:flex md:gap-5 lg:gap-6 lg:py-2",
+          isScrolled && "shadow-lg backdrop-blur-[10px]"
         )}
         // animate={hidden ? "hidden" : "visible"}
       >
-        <div className="w-[45%]">
-          <Link href={"/"} className="h-12 w-fit">
-            {/* <h2 className="text-lg bg-primary text-secondary px-3 py-0.5 w-fit">
-
-              Logo
-            </h2> */}
-            <img src="/logo-mb.png" alt="Logo" className="w-auto h-12" />
+        <div className="shrink-0">
+          <Link href={"/"} className="flex items-center">
+            <img
+              src="/logo-mb.png"
+              alt="Muskan Baid"
+              className="h-14 w-auto object-contain md:h-16 lg:h-[4.25rem]"
+            />
           </Link>
         </div>
-        <div className="flex gap-x-4 items-center w-[55%]">
+        <div className="flex min-w-0 flex-wrap items-center justify-center gap-x-3 gap-y-1 sm:gap-x-4">
           {navbarItems.map((item) => (
             <Link
               key={item.id}
-              className={`w-fit text-sm text-black capitalize flex`}
+              className="flex w-fit items-center text-xs capitalize text-black sm:text-sm"
               href={item.href}
             >
               {item.title}
             </Link>
           ))}
-          <Button asChild size="sm" className="px-4 ms-auto">
-            <Link href="#contact" className="">
-              Let's Talk
-            </Link>
+        </div>
+        <div className="shrink-0">
+          <Button
+            asChild
+            size="sm"
+            className="h-8 min-h-0 px-3 py-0 text-xs sm:h-9 sm:px-4 sm:text-sm"
+          >
+            <Link href="#contact">Let&apos;s Talk</Link>
           </Button>
         </div>
       </motion.nav>
-      <div className="fixed  inset-x-4 top-4 z-[90] md:hidden">
-        <nav className="bg-backdrop bg-secondary rounded-xl border border-black/10 w-full  backdrop-blur p-2 sm:py-3">
-          <div className="flex items-center justify-between">
+      <div className="fixed left-1/2 top-4 z-[90] flex w-[calc(100%-2rem)] max-w-full -translate-x-1/2 justify-center md:hidden">
+        <nav className="w-fit max-w-full rounded-2xl border border-black/10 bg-secondary/85 p-2 shadow-md backdrop-blur-md sm:p-2.5">
+          <div className="flex items-center gap-4 sm:gap-5">
             {/* Logo Section */}
             <Link
               href="/"
-              className="flex px-2 items-center gap-2 text-sm font-bold"
+              className="flex shrink-0 items-center"
             >
-              <img src="/logo-mb.png" alt="Logo" className="w-full h-12" />
+              <img
+                src="/logo-mb.png"
+                alt="Muskan Baid"
+                className="h-14 w-auto object-contain sm:h-16"
+              />
               {/* <h2 className="text-lg">Logo</h2> */}
             </Link>
 
@@ -125,24 +133,28 @@ export default function Header() {
                 transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
                 className="overflow-hidden px-4"
               >
-                <div className="mt-4 pb-4 border-t border-black/50 pt-4">
-                  <div className="flex flex-col gap-2 px-2">
+                <div className="mt-3 border-t border-black/50 pb-3 pt-3">
+                  <div className="flex flex-col items-center gap-1.5 px-2 text-center">
                     {navbarItems.map((link) => (
                       <Link
                         key={link.href}
                         href={link.href}
-                        className="text-sm text-black hover:text-foreground tracking-tight opacity-70 hover:opacity-100 transition-opacity transform py-1 px-2 rounded-md hover:bg-muted"
+                        className="w-full rounded-md px-2 py-0.5 text-sm tracking-tight text-black opacity-70 transition-opacity hover:bg-muted hover:opacity-100"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {link.title}
                       </Link>
                     ))}
                   </div>
-                  <Link href="#contact" className="p-2  inline-block">
-                    <Button size="sm" className="px-4">
-                      Let's Talk
+                  <div className="flex justify-center p-1.5 pt-2">
+                    <Button
+                      asChild
+                      size="sm"
+                      className="h-8 min-h-0 px-3 text-xs"
+                    >
+                      <Link href="#contact">Let&apos;s Talk</Link>
                     </Button>
-                  </Link>
+                  </div>
                 </div>
               </motion.div>
             )}
